@@ -4,15 +4,15 @@ import { ctx } from "./canvas-setup";
 export const car = {
   x: window.innerWidth / 2,
   y: window.innerHeight / 2,
-  width: 40,
-  height: 70,
+  width: 35,
+  height: 55,
   velocity: 0,
   friction: 0.05,
-  speed: 0.1,
-  maxSpeed: 4,
-  maxBackSpeed: 2,
+  speed: 0.3,
+  maxSpeed: 8,
+  maxBackSpeed: 4,
   angle: 0,
-  rotationSpeed: 0.007,
+  rotationSpeed: 0.01,
 
   draw(image) {
     ctx.translate(this.x, this.y);

@@ -2,12 +2,14 @@ import "./style.scss";
 import "./js/keysListeners";
 import { car } from "./js/car";
 import { canvas, ctx } from "./js/canvas-setup";
+import carImg from "./img/car.webp";
+import roadImg from "./img/road.jpg";
 
 const carImage = new Image();
-carImage.src = "./img/car.webp";
+carImage.src = carImg;
 
 const roadImage = new Image();
-roadImage.src = "./img/road.jpg";
+roadImage.src = roadImg;
 
 function animation() {
   canvas.height = window.innerHeight;
