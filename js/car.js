@@ -4,31 +4,32 @@ import { ctx } from "./canvas-setup";
 export const car = {
   x: window.innerWidth / 2,
   y: window.innerHeight / 2,
-  width: 10,
-  height: 20,
+  width: 40,
+  height: 70,
   velocity: 0,
-  friction: 0.1,
-  speed: 0.3,
-  maxSpeed: 8,
-  maxBackSpeed: 3,
-  angle: 2 * Math.PI,
-  rotationSpeed: 0.015,
+  friction: 0.05,
+  speed: 0.1,
+  maxSpeed: 4,
+  maxBackSpeed: 2,
+  angle: 0,
+  rotationSpeed: 0.007,
 
-  draw() {
+  draw(image) {
     ctx.translate(this.x, this.y);
     ctx.rotate(this.angle);
     ctx.translate(-this.x, -this.y);
     ctx.fillStyle = "black";
-    ctx.fillRect(
+    ctx.drawImage(
+      image,
       this.x - this.width / 2,
-      this.y - this.height / 2,
+      this.y - this.height / 4,
       this.width,
       this.height
     );
     ctx.fill();
   },
 
-  state() {
+  move(image) {
     if (this.velocity > 0) {
       this.velocity -= this.friction;
     } else if (this.velocity < 0) {
@@ -62,6 +63,6 @@ export const car = {
     this.y -= this.velocity * Math.cos(this.angle);
     this.x += this.velocity * Math.sin(this.angle);
 
-    this.draw();
+    this.draw(image);
   },
 };

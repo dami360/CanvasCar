@@ -7,7 +7,6 @@ export const keys = {
 
 window.addEventListener("keydown", (e) => {
   e.preventDefault();
-  console.log(e.key);
   switch (e.key) {
     case "w":
       keys.w = true;
