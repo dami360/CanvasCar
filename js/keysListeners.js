@@ -6,7 +6,6 @@ export const keys = {
 };
 
 window.addEventListener("keydown", (e) => {
-  e.preventDefault();
   switch (e.key) {
     case "w":
       keys.w = true;
@@ -36,7 +35,6 @@ window.addEventListener("keydown", (e) => {
 });
 
 window.addEventListener("keyup", (e) => {
-  e.preventDefault();
   switch (e.key) {
     case "w" || "ArrowUp":
       keys.w = false;

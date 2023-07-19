@@ -22,6 +22,6 @@ function animation() {
   requestAnimationFrame(animation);
 }
 
-roadImage.onload = () => {
+carImage.onload = () => {
   animation();
 };
