@@ -1,5 +1,5 @@
 import { keys } from "./keysListeners";
-import { ctx } from "./canvas-setup";
+import { ctx } from "../main";
 import { inputsValue } from "./inputs";
 
 export const car = {
@@ -25,11 +25,11 @@ export const car = {
   },
 
   move(image) {
-    this.width = 35 * inputsValue.scale;
-    this.height = 55 * inputsValue.scale;
-    this.acceleration = 0.3 * inputsValue.accScale;
-    this.maxSpeed = 8 * inputsValue.maxSpeedScale;
-    this.maxBackSpeed = 4 * inputsValue.maxSpeedScale;
+    this.width = 35;
+    this.height = 55;
+    this.acceleration = 0.1 * inputsValue.accScale;
+    this.maxSpeed = 4 * inputsValue.maxSpeedScale;
+    this.maxBackSpeed = 2 * inputsValue.maxSpeedScale;
     this.steeringAngle = 0.01 * inputsValue.steerAngleScale;
 
     if (this.velocity > 0) {
